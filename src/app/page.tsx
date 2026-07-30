@@ -238,7 +238,7 @@ export default function Home() {
               <a onClick={() => setMobileMenuOpen(false)} href="#screenshots" className="hover:text-accent-gold transition-colors">Screenshots</a>
             </nav>
             <div className="mt-12 pt-8 border-t border-white/[0.05]">
-              <a onClick={() => setMobileMenuOpen(false)} href="#download" className="inline-block w-full text-center py-3.5 rounded-full bg-accent-gold text-[#0B0B0C] font-sans font-medium tracking-[0.1em] uppercase text-xs hover:bg-[#F5F3EE] transition-all">
+              <a onClick={() => setMobileMenuOpen(false)} href="https://apps.apple.com/sg/app/eonbook/id6766190345" className="inline-block w-full text-center py-3.5 rounded-full bg-accent-gold text-[#0B0B0C] font-sans font-medium tracking-[0.1em] uppercase text-xs hover:bg-[#F5F3EE] transition-all">
                 Download on App Store
               </a>
             </div>
@@ -312,8 +312,8 @@ export default function Home() {
             transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row items-center gap-6"
           >
-            <a href="#download" className="flex items-center gap-3 bg-[#F5F3EE] hover:bg-accent-gold text-[#0B0B0C] px-7 py-3 rounded-xl transition-all duration-300 group shadow-lg">
-              <Image src={appleIcon} alt="" className="w-5 h-5 object-contain" />
+<a href="https://apps.apple.com/sg/app/eonbook/id6766190345" className="flex items-center gap-3 bg-[#F5F3EE] hover:bg-accent-gold text-[#0B0B0C] px-7 py-3 rounded-xl transition-all duration-300 group shadow-lg">
+  <Image src={appleIcon} alt="" className="w-5 h-5 object-contain" />
               <div className="text-left">
                 <p className="text-[9px] uppercase tracking-wider text-[#0B0B0C]/70">Download on the</p>
                 <p className="font-semibold text-xs -mt-0.5">App Store</p>
@@ -769,7 +769,7 @@ export default function Home() {
           </p>
 
           <div className="pt-4 flex justify-center">
-            <a href="#" className="flex items-center gap-4 bg-[#F5F3EE] hover:bg-accent-gold text-[#0B0B0C] px-9 py-4 rounded-xl transition-all duration-300 group shadow-2xl">
+            <a href="https://apps.apple.com/sg/app/eonbook/id6766190345" className="flex items-center gap-4 bg-[#F5F3EE] hover:bg-accent-gold text-[#0B0B0C] px-9 py-4 rounded-xl transition-all duration-300 group shadow-2xl">
               <Image src={appleIcon} alt="" className="w-6 h-6 object-contain" />
               <div className="text-left">
                 <p className="text-[10px] uppercase tracking-wider text-[#0B0B0C]/70">Download on the</p>
