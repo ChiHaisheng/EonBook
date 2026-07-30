@@ -16,17 +16,15 @@ import moon07 from "../images/Moon07.png";
 import heroLandscape from "../images/Photo001.webp";
 import principlesBackground from "../images/Foto01.jpg";
 
-const BASE_PATH = "/EonBook";
-
 // Real app screenshots mapping
 const SCREENSHOTS = {
-  bookshelf: `${BASE_PATH}/screenshots/002.jpg`,
-  reader: `${BASE_PATH}/screenshots/008A.png`,
-  philosophy: `${BASE_PATH}/screenshots/003.jpg`,
-  experience: `${BASE_PATH}/screenshots/004.jpg`,
-  highlights: `${BASE_PATH}/screenshots/010.PNG`,
-  thoughts: `${BASE_PATH}/screenshots/005.jpg`,
-  moonProfile: `${BASE_PATH}/screenshots/006.PNG`,
+  bookshelf: "/screenshots/002.jpg",
+  reader: "/screenshots/008A.png",
+  philosophy: "/screenshots/003.jpg",
+  experience: "/screenshots/004.jpg",
+  highlights: "/screenshots/010.PNG",
+  thoughts: "/screenshots/005.jpg",
+  moonProfile: "/screenshots/006.PNG",
 };
 
 // Interface for iPhone mockup
