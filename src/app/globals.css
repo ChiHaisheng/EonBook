@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0B0B0C;
+  --color-bg-sec: #10141D;
+  --color-text-pri: #F5F3EE;
+  --color-text-sec: #A6A6A6;
+  --color-accent-gold: #D6B26E;
+  
+  --font-serif: var(--font-eb-garamond), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-sans), sans-serif;
+}
+
+:root {
+  --background: #0B0B0C;
+  --foreground: #F5F3EE;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0B0C;
+  color: #F5F3EE;
+}
+
+/* Custom stars pulsing keyframes */
+@keyframes starPulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.star-slow {
+  animation: starPulse 7s ease-in-out infinite;
+}
+
+.star-med {
+  animation: starPulse 4.5s ease-in-out infinite;
+}
+
+.star-fast {
+  animation: starPulse 2.8s ease-in-out infinite;
+}
+
+/*
+ * Keep the landscape balanced across aspect ratios:
+ * enlarge the centered subject on phones and cap it on ultrawide displays.
+ */
+.hero-landscape {
+  width: 100%;
+  max-height: 70vh;
+}
+
+@media (max-width: 639px) {
+  .hero-landscape {
+    width: 200%;
+  }
+}
+
+.hero-landscape > img {
+  position: relative;
+  z-index: 1;
+  max-height: 70vh;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* Suppress stars beneath the opaque foreground while preserving the open sky. */
+.hero-landscape::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 30%,
+    rgb(18 23 34 / 0.35) 50%,
+    rgb(18 23 34 / 0.9) 72%,
+    #121722 100%
+  );
+  pointer-events: none;
+}
+
+/* Fade the image alpha at both sides so the live sky remains visible behind it. */
+@media (min-width: 640px) {
+  .hero-landscape > img {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 25%,
+      #000 75%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #000 25%,
+      #000 75%,
+      transparent 100%
+    );
+  }
+}
+
+/* The source already fades at the top; only soften its lower edge into the hero. */
+.hero-landscape::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
+  height: 34%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgb(18 23 34 / 0.5) 62%,
+    #121722 100%
+  );
+}
+
+/* Water ripples keyframes */
+@keyframes waterRipple {
+  0%, 100% {
+    opacity: 0.25;
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: translateY(-2px) scaleY(1.03) scaleX(1.01);
+  }
+}
+
+.water-ripple {
+  animation: waterRipple 8s ease-in-out infinite;
+}
+
+.water-ripple-slow {
+  animation: waterRipple 12s ease-in-out infinite;
+}
+
+.water-ripple-fast {
+  animation: waterRipple 5s ease-in-out infinite;
+}
+
+/* Hide scrollbar for carousel but keep functional scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
