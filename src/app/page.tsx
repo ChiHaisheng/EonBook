@@ -246,14 +246,14 @@ export default function Home() {
 
 
       {/* SECTION 1 — HERO */}
-      <section className="h-screen w-full isolate relative bg-gradient-to-b from-[#121722] via-[#1E2A40] to-[#121722] flex flex-col justify-between overflow-hidden pt-24">
+      <section className="h-[min(100svh,760px)] md:h-[min(100svh,900px)] lg:h-screen w-full isolate relative bg-gradient-to-b from-[#121722] via-[#1E2A40] to-[#121722] flex flex-col justify-between overflow-hidden pt-24">
         {/* The complete landscape sits above the sky layers without being cropped. */}
         <div className="hero-landscape absolute bottom-0 left-1/2 z-[2] -translate-x-1/2 pointer-events-none select-none">
           <Image
             src={heroLandscape}
             alt=""
             priority
-            sizes="100vw"
+            sizes="(max-width: 639px) min(171.5svh, 1303px), (max-width: 1023px) min(171.5svh, 1543px), 100vw"
             className="block h-auto w-full"
           />
         </div>
@@ -325,7 +325,7 @@ export default function Home() {
         </div>
 
         {/* Keeps the hero's lower spacing and scroll affordance. */}
-        <div className="w-full relative h-[38vh] sm:h-[40vh] min-h-[250px] max-h-[420px] select-none z-10">
+        <div className="w-full relative h-[32svh] sm:h-[36svh] min-h-[210px] max-h-[380px] select-none z-10">
           <svg className="hidden" preserveAspectRatio="none" viewBox="0 0 1440 400">
             <defs>
               {/* Moon reflection vertical gradient */}
@@ -586,7 +586,7 @@ export default function Home() {
 
 
       {/* SECTION 5 — MOON JOURNEY */}
-      <section id="moon-journey" className="pt-0 pb-[60px] md:pt-[44px] bg-[#111A29] border-t border-white/[0.02] w-full relative z-10 overflow-hidden">
+      <section id="moon-journey" className="pt-[100px] pb-[60px] bg-[#111A29] border-t border-white/[0.02] w-full relative z-10 overflow-hidden">
         {/* Sky glow */}
         <div className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[60vw] h-[30vw] bg-accent-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -663,7 +663,7 @@ export default function Home() {
 
 
       {/* SECTION 6 — SCREENSHOTS */}
-      <section id="screenshots" className="py-0 md:py-[44px] bg-[#202C43] border-y border-white/[0.02] w-full relative z-10 overflow-hidden">
+      <section id="screenshots" className="pt-[100px] pb-[100px] bg-[#202C43] border-y border-white/[0.02] w-full relative z-10 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="text-center mb-[4px] md:mb-[36px]">
             <span className="font-serif italic text-accent-gold text-base sm:text-lg mb-4 block">The Gallery</span>
@@ -679,7 +679,7 @@ export default function Home() {
               {/* Left Arrow Button */}
               <button 
                 onClick={prevCarousel} 
-                className="w-10 h-10 rounded-full border border-white/[0.08] hover:border-accent-gold text-text-sec hover:text-accent-gold flex items-center justify-center transition-all bg-[#0B0B0C]/40"
+                className="w-10 h-10 -translate-y-24 md:-translate-y-5 rounded-full border border-white/[0.08] hover:border-accent-gold text-text-sec hover:text-accent-gold flex items-center justify-center transition-all bg-[#0B0B0C]/40"
                 aria-label="Previous screenshot"
               >
                 <ChevronLeft size={18} />
@@ -738,7 +738,7 @@ export default function Home() {
               {/* Right Arrow Button */}
               <button 
                 onClick={nextCarousel} 
-                className="w-10 h-10 rounded-full border border-white/[0.08] hover:border-accent-gold text-text-sec hover:text-accent-gold flex items-center justify-center transition-all bg-[#0B0B0C]/40"
+                className="w-10 h-10 -translate-y-24 md:-translate-y-5 rounded-full border border-white/[0.08] hover:border-accent-gold text-text-sec hover:text-accent-gold flex items-center justify-center transition-all bg-[#0B0B0C]/40"
                 aria-label="Next screenshot"
               >
                 <ChevronRight size={18} />
